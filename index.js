@@ -6,9 +6,7 @@ const server = express();
 server.use(express.json());
 server.use(helmet());
 
-const express = require("express");
-
-const db = require("../data/zooDb");
+const db = require("./data/zooDb");
 
 server.post("/api/zoos", (req, res) => {
   const { name } = req.body;
